@@ -1,0 +1,24 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#titlerow {
+	margin-bottom: 40px;
+}
+
+#inputrow {
+	margin-bottom: 100px;
+}
+
+.input-group {
+
+	border-radius: 4px;
+	box-shadow: 0 0 2px 2px #DDD;
+	-moz-box-shadow: 0 0 2px 2px #DDD;
+	-webkit-box-shadow: 0 0 2px 2px#DDD;
+	-khtml-box-shadow: 0 0 2px 2px #DDD;
+}
+
+#save-addon {
+	color: white;
+}
