@@ -14,4 +14,18 @@ feature "Todolist" do
 			end
 		end
   end
+
+	scenario "insert a new todo item" do
+		visit root_path
+
+		itemtext = "Do something really awesome!"
+
+		within "#inputrow" do
+			fill_in "newitem[name]", :with => itemtext
+			click_button "save-btn"
+		end
+		within "#itemsrow" do
+			page.must_have_content itemtext
+		end
+	end
 end
