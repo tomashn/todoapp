@@ -5,12 +5,18 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		item = Item.new(newitem_params.merge( :category => 1 ))
-		if item.save(item)
-			redirect_to :action => :index
-		else
-			index
-			render 'items/index'
+		@item = Item.new(newitem_params.merge( :category => 1 ))
+
+		respond_to do |format|
+			if @item.save
+				format.html { redirect_to :action => :index }
+				format.js {}
+				# format.json { render json: @item, status: :created, location: @item }
+			else
+				index
+				format.html { render :action => :index }
+				# format.json { render json: @item.errors, status: :unprocessable_entry }
+			end
 		end
 	end
 

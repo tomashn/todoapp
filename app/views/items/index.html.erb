@@ -7,7 +7,7 @@
 
 	<div id="inputrow" class="row">
 		<div class="col-lg-12">
-			<%= form_tag do %>
+			<%= form_tag(root_path, remote: true) do %>
 				<div class="input-group">
 					<input type="text" class="form-control" name="newitem[name]" placeholder="To do." aria-describedby="save-btn">
 
@@ -22,9 +22,7 @@
 	<div id="itemsrow" class="row">
 		<div class="col-lg-12">
 			<ul class="list-group">
-				<% @items.each do |item| %>
-					<li id="item<%= item.id %>" class="list-group-item"><%= item.name %></li>
-				<% end %>
+				<%= render @items %>
 			</ul>
 		</div>
 	</div>
