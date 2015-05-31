@@ -1,0 +1,19 @@
+// Place all the styles related to the user_sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#fg-login {
+	width: 100%;
+}
+
+#email_field {
+	width: 50%;
+}
+
+#password_field {
+	width: 30%;
+}
+
+input.form-control {
+	width: 100% !important;
+}
