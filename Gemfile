@@ -36,14 +36,19 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+gem 'authlogic'
+gem 'nokogiri'
+
+gem 'minitest-rails'
+
 group :test do
 	gem 'minitest-rails-capybara'
 	gem 'minitest-reporters'
-	# gem 'capybara'
-	# gem 'capybara_minitest_spec'
-	# gem 'poltergeist'
+	gem 'activesupport'
+	gem 'poltergeist'
 end

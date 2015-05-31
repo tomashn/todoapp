@@ -1,0 +1,5 @@
+tomashn:
+        email: tomashn@github.com
+        password_salt: <%= salt = Authlogic::Random.hex_token %>
+        crypted_password: <%= Authlogic::CryptoProviders::MD5.encrypt("pass" + salt) %>
+        persistence_token: <%= Authlogic::Random.hex_token %>
